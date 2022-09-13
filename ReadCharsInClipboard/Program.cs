@@ -50,7 +50,7 @@ namespace ReadCharsInClipboard
         static String tryReadChars(SoftwareBitmap bitmap)
         {
             // execute OCR
-            // TOOD: It might be better to change the language setting by OS settings.
+            // TODO: It might be better to change the language setting by OS settings.
             OcrEngine engine = OcrEngine.TryCreateFromLanguage(new Windows.Globalization.Language("ja-JP"));
             var result = engine.RecognizeAsync(bitmap);
             result.AsTask().Wait();
